@@ -15,7 +15,7 @@ fn main() {
 ///
 /// assert_eq!(arr, [1, 2, 3, 4]);
 /// ```
-fn bubble_sort<const N: usize, T: Clone + PartialOrd + Copy>(arr: &mut [T; N]) {
+fn bubble_sort<const N: usize, T: PartialOrd>(arr: &mut [T; N]) {
     for i in 0..N {
         for j in 0..i {
             if arr[j] > arr[i] {
